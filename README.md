@@ -1,5 +1,3 @@
-> Erstveröffentlichung in Vorbereitung: Die installierbare Version erscheint nach Freigabe des getesteten Releases.
-
 # Automation AI für Home Assistant OS
 
 Repository für Apps → Repositories:
