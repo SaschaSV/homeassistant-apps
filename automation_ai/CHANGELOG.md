@@ -1,3 +1,12 @@
+# 3.3.0
+
+- Chat beginnt direkt unter einer kompakten Kopfzeile; Modellwahl und erweiterte Parameter liegen in Einstellungen.
+- Zwei dauerhafte Rollenprofile: Qwen3.5-9B / `low` für schnelle Befehle und Abfragen, Qwen3.8-27B / `xhigh` für Automationen, Skripte, Entwicklung und Diagnose.
+- Automatische Zuordnung einschließlich Auftragskorrekturen; Konfigurationswerkzeuge des schnellen Modells werden vor Ausführung an das komplexe Profil übergeben. Keine stille Herabstufung bei fehlendem Reasoning-Nachweis.
+- Beide Qwen-Kombinationen am realen OVH-Endpunkt mit synthetischen Daten geprüft. Kontogebundene Nachweise werden weiterhin in der Installation geprüft.
+- Vorlesen: OVH als Chat-Ausgabeprofil, sichtbare Wiedergabesteuerung bei Autoplay-Sperre, längere TTS-Wartezeit und verständliche Fehler. Assist-Pipeline und Spracheingabe unverändert.
+- Einmalige Profilmigration mit Sicherung der vorherigen Einstellungen; Chatverläufe und alte API-Optionen bleiben erhalten.
+
 # 3.2.4
 
 - OVH/Qwen-HTTP-400 beim Chat behoben: Anweisungen und lokaler Kontext stehen zusammen in genau einer ersten Systemnachricht.

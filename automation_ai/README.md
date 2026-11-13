@@ -1,7 +1,7 @@
 # Automation AI
 
-Deutscher Chat, direkte Spracheingabe und geprüfte Verwaltungsaufträge für Home Assistant. Die App wird aus dem lokalen Quellordner gebaut; es wird kein eigenes veröffentlichtes Containerimage vorausgesetzt.
+Deutscher Chat und geprüfte Verwaltungsaufträge für Home Assistant OS. Der Chat verwendet automatisch ein schnelles und ein komplexes Modellprofil; beide sind unter Einstellungen konfigurierbar. Standard: Qwen3.5-9B / `low` und Qwen3.8-27B / `xhigh`, jeweils erst nach erfolgreicher API-Prüfung.
 
-Die Installation benötigt zusätzlich die im vollständigen ZIP mitgelieferte Integration `custom_components/automation_ai` für native Konfigurationsänderungen und Assist. Der eigene Chat bleibt unabhängig von einer Assist-Konversation.
+Installation und Updates über https://github.com/SaschaSV/homeassistant-apps mit öffentlichen ARM64-/AMD64-Images. Für native Konfigurationsänderungen und Assist ist zusätzlich die Integration unter https://github.com/SaschaSV/automation-ai-integration vorgesehen. Der eigene Chat bleibt von der bestehenden Assist-Pipeline unabhängig.
 
-Version 3.1.0 ist eine Installationsfassung mit automatisierten Entwicklungstests. Echte Raspberry-/Core-/OVH-/Android-Prüfungen sind noch offen. Vollständige Anleitung und Testbericht befinden sich im Hauptordner des ZIP.
+Updates werden nach expliziter Release-Freigabe und bestandenen Tests verteilt. Vor Installation ein Backup erstellen. Hardwaretests auf dem Nutzertelefon und Raspberry Pi sind nicht Teil der automatisierten Entwicklungsprüfung.
