@@ -57,3 +57,8 @@ Der Chatstatus nennt Runde und Werkzeugschritt. Wiederholte Schritte stoppen fr�
 ### Automatisch erzeugte Dashboards (3.5.2)
 
 Wenn die Übersicht ihre Bereiche automatisch erzeugt, lässt sich dort derzeit keine Karte durch diese App einfügen. Die Szene kann trotzdem als **Teillösung zur Freigabe** vorbereitet werden. Der offene Dashboard-Punkt steht direkt in der Karte. „Änderungen freigeben“ speichert nur die aufgeführten Schritte; es schaltet die Szene nicht ein und wandelt das Dashboard nicht um. Nach Ausführung bleibt der offene Punkt sichtbar. Fehler und Abbrüche sind auch nach erneutem Öffnen des Gesprächs im Verlauf lesbar.
+
+
+### Szenen nach Bereich anzeigen (3.5.3)
+
+Bei einer bereichsgefilterten Szenenanzeige genügt gegebenenfalls die Zuordnung der Szene zum Bereich, zum Beispiel Bad. Dafür muss das automatische Dashboard nicht umgebaut werden. Neue Szenen können zusammen mit ihrer Bereichszuordnung zur Freigabe erscheinen. Bei vorhandenen Szenen genügt: „Ordne die vorhandene Szene Bad Gemütlich dem Bereich Bad zu. Nicht neu erstellen oder aktivieren.“ Nach der Freigabe wird die Zuordnung aus Home Assistant zurückgelesen. Ob deine Dashboard-Filter die Szene tatsächlich anzeigen, bitte anschließend dort prüfen.

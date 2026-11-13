@@ -1,3 +1,10 @@
+# 3.5.3 · 2026-11-13
+
+- Neue Szenen und Bereichszuordnung gemeinsam zur Freigabe planen. Tatsächliche Szenen-ID nach dem Speichern lesen und Zuordnung zurückprüfen.
+- Vorhandene Szenen über ihre Entity-ID zuordnen; keine Neuerstellung nötig. Bereich und Kategorie unterscheiden.
+- Bereichsgefilterte Dashboards können Szenen automatisch anzeigen. Keine pauschale Aussage mehr, dass automatische Dashboards eine direkte Kartenänderung benötigen. Sichtprüfung bleibt getrennt.
+- 198 Python-Tests, 20 JavaScript-Prüfungen und Chromium bestanden, einschließlich Rücknahme und Konfliktschutz.
+
 # 3.5.2 · 2026-11-13
 
 - Szene bei automatisch erzeugtem Dashboard separat als Teillösung zur Freigabe vorbereiten; offene Verknüpfung in Karte und Ausführungsergebnis anzeigen.
