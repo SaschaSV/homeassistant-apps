@@ -1,3 +1,11 @@
+# 3.5.4 · 2026-11-13
+
+- Vorhandene Szenen, Automationen und Skripte über ihre echte Register-/Konfigurations-ID lesen; keine geratene ID aus Entity-Namen. Gezielt ändern, Namen und Bereiche erhalten.
+- Entwürfe für Änderungen benötigen eine zuvor gelesene Konfiguration. Konflikte zwischen Lesen, Freigabe und Ausführung erkennen; keine Szenenaktivierung als Ersatz für eine Änderung.
+- Chat ohne leere, doppelte Auftragskarte. Verständliche und dauerhaft gespeicherte Fehler, auch nach Wiederaufnahme; technische Details unter Aufträge.
+- Fehlgeschlagene ID-Versuche früh beenden. Empfangene Antworten bleiben auch bei Fehlern beim Nachladen von Verlauf oder Aufträgen sichtbar.
+- 215 Python-Tests, 25 JavaScript-Prüfungen und Chromium bestanden. Integration meldet die korrekte Version.
+
 # 3.5.3 · 2026-11-13
 
 - Neue Szenen und Bereichszuordnung gemeinsam zur Freigabe planen. Tatsächliche Szenen-ID nach dem Speichern lesen und Zuordnung zurückprüfen.
