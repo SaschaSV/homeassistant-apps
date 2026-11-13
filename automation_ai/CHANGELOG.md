@@ -1,3 +1,11 @@
+# 3.4.1
+
+- Fortschritt der Automationsanalyse repariert: einzelne Automationen, sofort sichtbare und dauerhaft gespeicherte Teilergebnisse statt Warten auf den Gesamtbericht.
+- Aktuelle Automation, tatsächlicher Wartezustand und Zeitlimit sichtbar. Standard: zehn Minuten je Automation einschließlich Formatkorrektur, in Einstellungen anpassbar.
+- Stoppen, Timeout und Neustart erhalten fertige Ergebnisse; keine automatische Wiederholung oder Reasoning-Herabstufung.
+- Gültige Quellenverweise auf das vollständige Eingabeobjekt werden nicht mehr fälschlich verworfen. Erfundenen Quellen wird weiterhin widersprochen; Dienstnamen werden nicht als fehlende Entitäten geführt.
+- Regression mit 14 Automationen, Quellenvalidierung, Persistenz und Browser-Stoppen ergänzt.
+
 # 3.4.0
 
 - Messengerartige Sprechblasen; Nachrichten erscheinen sofort, die Eingabe wird frei. Status und Fehler stehen im Verlauf, nächste Entwürfe bleiben erhalten.
