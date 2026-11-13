@@ -1,3 +1,9 @@
+# 3.2.4
+
+- OVH/Qwen-HTTP-400 beim Chat behoben: Anweisungen und lokaler Kontext stehen zusammen in genau einer ersten Systemnachricht.
+- Echter Qwen3.5-9B-Test: Temperaturfrage → Sensorwerkzeug → Antwort mit synthetischem Sensor erfolgreich. Kein Modellwechsel oder reduziertes Reasoning nötig.
+- Regressionstest für Chatversand, Folgefragen, Sensorantworten und Deduplizierung ergänzt.
+
 # 3.2.3
 
 - Fehlende EUR-Preise blockieren Chat, STT und TTS bei deaktivierten Kostenlimits nicht mehr.
