@@ -1,3 +1,10 @@
+# 3.5.2 · 2026-11-13
+
+- Szene bei automatisch erzeugtem Dashboard separat als Teillösung zur Freigabe vorbereiten; offene Verknüpfung in Karte und Ausführungsergebnis anzeigen.
+- Raumsuche für Badezimmer/Bad korrigieren, Dashboard-Grenze konkret erklären, Umgehung über neue Ansichten verhindern.
+- Leere Modellantworten erklären; Fehler, Stoppen und Neustart dauerhaft im Chat speichern. Vorhandene Analyseberichte erhalten.
+- 189 Python-Tests, 20 JavaScript-Prüfungen und Chromium bestanden; vollständiger Live-Test durch HTTP 429 begrenzt.
+
 # 3.5.1 · 2026-11-13
 
 - Szenen gemeinsam mit einer Karte in vorhandenen Dashboard-Ansichten und Bad-Sektionen planen. Tatsächliche Szenen-ID erst nach dem Speichern aus Home Assistant lesen; Freigabe bleibt erforderlich.

@@ -52,3 +52,8 @@ Beim Laden/Neuladen beginnt ein leerer Chat. Alte Gespräche und laufende Verarb
 Eine neue Szene und eine Karte in einem vorhandenen Dashboard-Bereich können zusammen als Plan zur Freigabe erscheinen. Die Szene wird dadurch nicht eingeschaltet. Die App liest die tatsächliche Szenen-ID nach dem Speichern. Automatisch erzeugte oder YAML-Dashboards werden nicht übernommen; diese Grenze muss die Antwort erklären.
 
 Der Chatstatus nennt Runde und Werkzeugschritt. Wiederholte Schritte stoppen frühzeitig. Wenn nach höchstens acht Runden kein gültiger Entwurf vorliegt, zeigt der Chat konkrete Hindernisse; „Letzte Modellanfrage“ öffnet die gesendeten Anfragen. Keine automatische Wiederholung oder Herabstufung des Modells.
+
+
+### Automatisch erzeugte Dashboards (3.5.2)
+
+Wenn die Übersicht ihre Bereiche automatisch erzeugt, lässt sich dort derzeit keine Karte durch diese App einfügen. Die Szene kann trotzdem als **Teillösung zur Freigabe** vorbereitet werden. Der offene Dashboard-Punkt steht direkt in der Karte. „Änderungen freigeben“ speichert nur die aufgeführten Schritte; es schaltet die Szene nicht ein und wandelt das Dashboard nicht um. Nach Ausführung bleibt der offene Punkt sichtbar. Fehler und Abbrüche sind auch nach erneutem Öffnen des Gesprächs im Verlauf lesbar.
