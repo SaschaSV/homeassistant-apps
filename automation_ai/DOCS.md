@@ -3,8 +3,8 @@
 1. Den vollständigen Ordner `local_apps/automation_ai` in die lokale App-Freigabe kopieren, Store aktualisieren, installieren und starten.
 2. Den mitgelieferten Integrationsordner nach `config/custom_components/automation_ai` kopieren und Core neu starten.
 3. App über Ingress als persönlicher HA-Administrator öffnen. In Einstellungen einen Kopplungsschlüssel erzeugen; die Integration Automation AI mit Host `local-automation-ai` und diesem Schlüssel hinzufügen.
-4. OVH-Schlüssel geschützt hinterlegen, Modellkatalog laden, Schnell-/Planungsmodelle auswählen und Preise eintragen; Monatslimits sind optional. Unbekannte Sprachpreise sperren die jeweilige Cloudfunktion.
-5. „Sprechen“ startet unter HTTPS mit Mikrofonfreigabe die direkte Aufnahme. Bei lokalem HTTP öffnet sich die Audioauswahl des Geräts (Aufnahme-App oder Audiodatei, abhängig vom Gerät). Alternativ im Textfeld über das Tastaturmikrofon diktieren. Native Assist-/Okay-Nabu-Aufnahme ist ein separater Weg.
+4. OVH-Schlüssel geschützt hinterlegen, Modellkatalog laden, Schnell-/Planungsmodelle auswählen und Preise können optional zur EUR-Auswertung eingetragen werden; Monatslimits sind ebenfalls optional. Unbekannte Preise werden als unbekannte Kosten erfasst und blockieren ohne aktiviertes Limit keine Cloudfunktion.
+5. „Sprechen“ startet unter HTTPS mit Mikrofonfreigabe die direkte Aufnahme. Bei lokalem HTTP fokussiert „Tastatur-Diktat“ das Eingabefeld. Dort das Mikrofon der Android-Tastatur antippen und anschließend den erkannten Text senden. Native Assist-/Okay-Nabu-Aufnahme ist ein separater Weg.
 6. Verwaltungsfunktionen erst für die Nutzung aktivieren. Jeder Verwaltungsplan benötigt weiterhin eine konkrete Freigabe. Optionale reale Tests sind nicht vorgewählt.
 
 Die App hat technisch breite Core-/Supervisor-Rechte. Konkrete Werkzeuge begrenzen deren Verwendung; ein Modelltext ist keine Freigabe. Kritische Geräteaktionen sind standardmäßig gesperrt. Es gibt keinen öffentlichen Host-Port, keinen freien Shell-/Datei-/HTTP-Agenten und keinen stillen Cloudanbieterwechsel.
@@ -25,4 +25,10 @@ Ab 3.2.2 funktioniert der Chatversand auch bei lokalem HTTP. Laufende Anfragen z
 
 Nach dem Update einmal unter Einstellungen „Modellkatalog aktualisieren“ wählen, falls die frühere Reasoning-Prüfung abgebrochen wurde. HTTP 422 bei einer absichtlich ungültigen Teststufe wird intern ausgewertet und ist kein Nachweis eines falschen Schlüssels. Erst erfolgreiche Modellprüfungen geben Reasoning-Stufen frei; xhigh wird nicht still auf eine niedrigere Stufe gesetzt. Bei HTTP 401/403 Schlüssel und Modellberechtigung prüfen. Der gespeicherte Schlüssel muss für dieses Update nicht erneut eingegeben werden.
 
-Für die Audio-Transkription den OVHcloud-STT-Preis samt Quelle und Datum hinterlegen. Bis zu 85 Sekunden / 5 MB aufnehmen. Eine native Aufnahme im Dateidialog kann nicht für jede Companion-App-/Betriebssystemversion zugesichert werden. HTTPS-Direktaufnahme setzt weiterhin die Mikrofonfreigabe voraus.
+Der OVHcloud-STT-Preis samt Quelle und Datum ist bei deaktivierten Limits optional. Bis zu 85 Sekunden / 5 MB aufnehmen. Eine native Aufnahme im Dateidialog kann nicht für jede Companion-App-/Betriebssystemversion zugesichert werden. HTTPS-Direktaufnahme setzt weiterhin die Mikrofonfreigabe voraus.
+
+## Preise und Diktieren ab 3.2.3
+
+Bei ausgeschalteten Kostenlimits ist keine Preiskonfiguration erforderlich. Ein bewusst aktiviertes Kostenlimit verlangt dagegen bewertbare EUR-Kosten; deaktivieren unter Automation AI → Zahnrad → Reasoning, Tokenlimits und optionale Kostenbegrenzung (Limitfeld leeren). Fehlende Preise und frühere unbewertete Anfragen werden nicht als kostenlos behandelt.
+
+Androids native Assist-Aufnahme kann nicht direkt als Diktierfunktion für diese eingebettete Webseite benutzt werden. Unter HTTP wird keine Dateiauswahl mehr als Aufnahme gestartet. Für die direkte Aufnahme muss der in der Companion-App verwendete Home-Assistant-Zugang HTTPS mit gültigem Zertifikat verwenden (beispielsweise ein bereits eingerichteter Home Assistant Cloud-Zugang). Danach dieselbe Automation-AI-App öffnen und die Mikrofonberechtigung erteilen. Die App richtet HTTPS nicht selbst ein und ändert keine Assist-Pipeline. Ohne HTTPS bleibt das Mikrofon der Android-Tastatur nutzbar; dessen Spracherkennung gehört zum konfigurierten Tastaturdienst.

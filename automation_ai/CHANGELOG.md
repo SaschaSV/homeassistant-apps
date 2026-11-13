@@ -1,3 +1,10 @@
+# 3.2.3
+
+- Fehlende EUR-Preise blockieren Chat, STT und TTS bei deaktivierten Kostenlimits nicht mehr.
+- Tokens und Audiodauer werden auch ohne Preis erfasst; Kosten bleiben ausdrücklich unbekannt statt als kostenlos zu erscheinen.
+- Bewusst aktivierte Kostenlimits bleiben verbindlich und melden fehlende Bewertbarkeit klar.
+- Android/HTTP: kein Dateidialog mehr hinter dem Sprachbutton. „Tastatur-Diktat“ fokussiert das Textfeld und erklärt die Tastaturaufnahme. Direkte Mikrofonaufnahme benötigt weiterhin HTTPS; die native Assist-Oberfläche liefert kein Diktat an diesen Chat zurück.
+
 # 3.2.2
 
 - Chatversand bei lokalem HTTP repariert: keine festhängende Eingabe durch fehlendes `crypto.randomUUID`.
