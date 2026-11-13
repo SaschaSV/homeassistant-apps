@@ -1,12 +1,19 @@
-# 3.4.1
+# 3.5.1 · 2026-11-13
 
-## 3.5.0 · 2026-11-13
+- Szenen gemeinsam mit einer Karte in vorhandenen Dashboard-Ansichten und Bad-Sektionen planen. Tatsächliche Szenen-ID erst nach dem Speichern aus Home Assistant lesen; Freigabe bleibt erforderlich.
+- Dashboard-Ziele lesend ermitteln; automatische und YAML-Dashboards nicht überschreiben.
+- Wiederholte Planungsschritte stoppen, Leseergebnisse innerhalb eines Auftrags wiederverwenden und konkrete Werkzeug-/Validierungsfehler im Chat anzeigen. Höchstens acht Modellrunden, mit sichtbarem Schritt und Abschlussanweisung.
+- Zu umfangreiche Werkzeugergebnisse liefern einen gültigen, verständlichen Fehler statt abgeschnittenem JSON.
+
+# 3.5.0 · 2026-11-13
 
 - Kostenübersicht über den gesamten erfassten Zeitraum, Monatsauswahl, Modell- und Auftragsdetails. Berechneter Verbrauch, Reservierungen und ungeklärte Kosten getrennt; historische Buchungen bleiben erhalten.
 - Versionierte OVH-EUR-Preistabelle für 24 Modelle, einschließlich schnellem Qwen, Whisper und deutschem TTS. Tarifstand pro neuer Anfrage; App-Updates aktualisieren Standardtarife und erhalten manuelle Vorgaben.
 - Letzte tatsächlich übergebene Modellanfrage in der Kopfzeile: komplette Nachrichten, Werkzeuge, Parameter, kopierbares JSON und Auswahl einzelner Analyseaufrufe. Verschlüsselte, zeitlich begrenzte lokale Kopien; Zugangsdaten geschwärzt.
 - Frischer Chat bei erneutem Laden. Alte Gespräche und laufende Verarbeitungen ausdrücklich wieder öffnen; kein automatisches Mitsenden alter Verläufe.
 - Präzise Kostenberechnung ohne doppelte Reasoning-Zählung, transparente optionale MwSt.-Schätzung und Release-Prüfung des Preisstands.
+
+# 3.4.1
 
 - Fortschritt der Automationsanalyse repariert: einzelne Automationen, sofort sichtbare und dauerhaft gespeicherte Teilergebnisse statt Warten auf den Gesamtbericht.
 - Aktuelle Automation, tatsächlicher Wartezustand und Zeitlimit sichtbar. Standard: zehn Minuten je Automation einschließlich Formatkorrektur, in Einstellungen anpassbar.

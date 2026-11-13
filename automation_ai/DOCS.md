@@ -45,3 +45,10 @@ Qwen3.5-9B lehnte die bisherige zweite Systemnachricht mit „System message mus
 **⌘ oben im Chat** öffnet die neueste Modellanfrage. Frühere Aufrufe, komplette Nachrichten, Automationsdaten, Werkzeuge und JSON sind auswählbar. Zugangsdaten werden geschwärzt; HTTP-Authentifizierungsheader werden nicht erfasst. Kopien bleiben verschlüsselt lokal, maximal sieben Tage, 200 Aufrufe pro Benutzer und 64 MiB insgesamt. Sie sind nur für den jeweiligen persönlichen HA-Administrator sichtbar. Vor diesem Update gesendete Prompts sind nicht rekonstruierbar.
 
 Beim Laden/Neuladen beginnt ein leerer Chat. Alte Gespräche und laufende Verarbeitungen können ausdrücklich wieder geöffnet werden. Kostenhistorie und laufende Aufträge werden dabei nicht gelöscht oder erneut ausgeführt. Vor Installation eines Updates ein Home-Assistant-Backup erstellen; Release erst nach ausdrücklicher Freigabe veröffentlichen.
+
+
+## Szenen und Dashboard-Karten ab 3.5.1
+
+Eine neue Szene und eine Karte in einem vorhandenen Dashboard-Bereich können zusammen als Plan zur Freigabe erscheinen. Die Szene wird dadurch nicht eingeschaltet. Die App liest die tatsächliche Szenen-ID nach dem Speichern. Automatisch erzeugte oder YAML-Dashboards werden nicht übernommen; diese Grenze muss die Antwort erklären.
+
+Der Chatstatus nennt Runde und Werkzeugschritt. Wiederholte Schritte stoppen frühzeitig. Wenn nach höchstens acht Runden kein gültiger Entwurf vorliegt, zeigt der Chat konkrete Hindernisse; „Letzte Modellanfrage“ öffnet die gesendeten Anfragen. Keine automatische Wiederholung oder Herabstufung des Modells.
