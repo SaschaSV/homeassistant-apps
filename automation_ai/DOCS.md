@@ -3,7 +3,7 @@
 1. Den vollständigen Ordner `local_apps/automation_ai` in die lokale App-Freigabe kopieren, Store aktualisieren, installieren und starten.
 2. Den mitgelieferten Integrationsordner nach `config/custom_components/automation_ai` kopieren und Core neu starten.
 3. App über Ingress als persönlicher HA-Administrator öffnen. In Einstellungen einen Kopplungsschlüssel erzeugen; die Integration Automation AI mit Host `local-automation-ai` und diesem Schlüssel hinzufügen.
-4. OVH-Schlüssel geschützt hinterlegen, Modellkatalog laden, Schnell-/Planungsmodelle auswählen und Preise können optional zur EUR-Auswertung eingetragen werden; Monatslimits sind ebenfalls optional. Unbekannte Preise werden als unbekannte Kosten erfasst und blockieren ohne aktiviertes Limit keine Cloudfunktion.
+4. OVH-Schlüssel geschützt hinterlegen, Modellkatalog laden, Schnell-/Planungsmodelle auswählen und geprüfte OVH-Preise sind mitgeliefert; eigene Tarife können optional eingetragen werden; Monatslimits sind ebenfalls optional. Unbekannte Preise werden als unbekannte Kosten erfasst und blockieren ohne aktiviertes Limit keine Cloudfunktion.
 5. „Sprechen“ startet unter HTTPS mit Mikrofonfreigabe die direkte Aufnahme. Bei lokalem HTTP fokussiert „Tastatur-Diktat“ das Eingabefeld. Dort das Mikrofon der Android-Tastatur antippen und anschließend den erkannten Text senden. Native Assist-/Okay-Nabu-Aufnahme ist ein separater Weg.
 6. Verwaltungsfunktionen erst für die Nutzung aktivieren. Jeder Verwaltungsplan benötigt weiterhin eine konkrete Freigabe. Optionale reale Tests sind nicht vorgewählt.
 
@@ -36,3 +36,12 @@ Androids native Assist-Aufnahme kann nicht direkt als Diktierfunktion für diese
 ## Qwen-HTTP-400 beim Chat (behoben in 3.2.4)
 
 Qwen3.5-9B lehnte die bisherige zweite Systemnachricht mit „System message must be at the beginning“ ab. Version 3.2.4 übermittelt Anweisungen und lokalen Kontext gemeinsam in einer ersten Systemnachricht. Nach dem Update die Oberfläche neu öffnen und die Frage erneut senden. Weder Schlüssel noch Modellkatalog noch Tokenlimit müssen dafür neu eingerichtet werden. Frühere fehlgeschlagene Anfragen werden nicht automatisch erneut gesendet.
+
+
+# Kosten und gesendete Anfragen ab 3.5.0
+
+**System** zeigt den gesamten erfassten Zeitraum, einzelne Monate, Modelle und einzelne Aufrufe. Berechnete Verbrauchskosten, laufende Reservierungen und ungeklärte Kosten sind getrennt. Frühere Buchungen bleiben erhalten; die geänderte Summendarstellung ist keine Gutschrift von OVH. Preisstände werden mit App-Updates verteilt. Eigene Modelltarife bleiben erhalten. Die Steuerbasis steht im Beleg; eine optionale MwSt.-Schätzung gilt nur für bekannte Nettobeträge.
+
+**⌘ oben im Chat** öffnet die neueste Modellanfrage. Frühere Aufrufe, komplette Nachrichten, Automationsdaten, Werkzeuge und JSON sind auswählbar. Zugangsdaten werden geschwärzt; HTTP-Authentifizierungsheader werden nicht erfasst. Kopien bleiben verschlüsselt lokal, maximal sieben Tage, 200 Aufrufe pro Benutzer und 64 MiB insgesamt. Sie sind nur für den jeweiligen persönlichen HA-Administrator sichtbar. Vor diesem Update gesendete Prompts sind nicht rekonstruierbar.
+
+Beim Laden/Neuladen beginnt ein leerer Chat. Alte Gespräche und laufende Verarbeitungen können ausdrücklich wieder geöffnet werden. Kostenhistorie und laufende Aufträge werden dabei nicht gelöscht oder erneut ausgeführt. Vor Installation eines Updates ein Home-Assistant-Backup erstellen; Release erst nach ausdrücklicher Freigabe veröffentlichen.

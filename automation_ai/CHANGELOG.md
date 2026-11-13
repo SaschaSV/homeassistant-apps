@@ -1,5 +1,13 @@
 # 3.4.1
 
+## 3.5.0 · 2026-11-13
+
+- Kostenübersicht über den gesamten erfassten Zeitraum, Monatsauswahl, Modell- und Auftragsdetails. Berechneter Verbrauch, Reservierungen und ungeklärte Kosten getrennt; historische Buchungen bleiben erhalten.
+- Versionierte OVH-EUR-Preistabelle für 24 Modelle, einschließlich schnellem Qwen, Whisper und deutschem TTS. Tarifstand pro neuer Anfrage; App-Updates aktualisieren Standardtarife und erhalten manuelle Vorgaben.
+- Letzte tatsächlich übergebene Modellanfrage in der Kopfzeile: komplette Nachrichten, Werkzeuge, Parameter, kopierbares JSON und Auswahl einzelner Analyseaufrufe. Verschlüsselte, zeitlich begrenzte lokale Kopien; Zugangsdaten geschwärzt.
+- Frischer Chat bei erneutem Laden. Alte Gespräche und laufende Verarbeitungen ausdrücklich wieder öffnen; kein automatisches Mitsenden alter Verläufe.
+- Präzise Kostenberechnung ohne doppelte Reasoning-Zählung, transparente optionale MwSt.-Schätzung und Release-Prüfung des Preisstands.
+
 - Fortschritt der Automationsanalyse repariert: einzelne Automationen, sofort sichtbare und dauerhaft gespeicherte Teilergebnisse statt Warten auf den Gesamtbericht.
 - Aktuelle Automation, tatsächlicher Wartezustand und Zeitlimit sichtbar. Standard: zehn Minuten je Automation einschließlich Formatkorrektur, in Einstellungen anpassbar.
 - Stoppen, Timeout und Neustart erhalten fertige Ergebnisse; keine automatische Wiederholung oder Reasoning-Herabstufung.
