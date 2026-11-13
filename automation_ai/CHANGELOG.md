@@ -1,3 +1,11 @@
+# 3.4.0
+
+- Messengerartige Sprechblasen; Nachrichten erscheinen sofort, die Eingabe wird frei. Status und Fehler stehen im Verlauf, nächste Entwürfe bleiben erhalten.
+- Zwei dauerhaft bearbeitbare Rollenprompts unter Einstellungen, einschließlich Standard-Reset. Konkrete Analyseergebnisse statt pauschaler Erledigungsmeldungen.
+- Gesamte Automationsanalyse liest verfügbare native Konfigurationen und liefert Berichte pro Automation mit Befund, Quellstelle, Priorität, Vorschlag und Nutzen. Nicht geprüfte Quellen werden ausgewiesen; keine Änderungen ohne Freigabe.
+- Nachrichten werden vor der Modellverarbeitung gespeichert und bei Wiederaufnahme nicht doppelt angelegt. Vorhandene Verläufe, Profile und Assist-Pipeline bleiben erhalten.
+- 149 Python-Tests, 18 JavaScript-Prüfungen, Chromium und echte synthetische Qwen-Analyse erfolgreich.
+
 # 3.3.0
 
 - Chat beginnt direkt unter einer kompakten Kopfzeile; Modellwahl und erweiterte Parameter liegen in Einstellungen.
