@@ -1,5 +1,27 @@
 # Änderungen
 
+## 0.3.0
+
+- Kompakte Startseite ohne Werbespruch, sichtbarer KI-Chat und Navigation zu fünf Bereichen.
+- Abgeschlossene Importmeldungen auf der Startseite platzsparend und schließbar; laufende
+  Importe und vollständige Details behalten ihre Status- und Laufzeitanzeige.
+- Eindeutige persönliche Ausgaben direkt buchen: zum Beispiel „Trage für heute 24,20 Euro
+  ein für Kuchen“. Sichere Standardwerte für Datum, Profil und Haushaltsbuch; Bestätigung
+  aus dem tatsächlich gespeicherten Datensatz und Rückgängig. Einfache Befehle funktionieren
+  ohne KI-Anfrage. Diktierte und eingegebene Texte verwenden dieselbe Verarbeitung.
+- Chat für Kategorien, Konten, Planung und echte typisierte Zusatzspalten erweitert;
+  Zusatzwerte bearbeiten, exportieren und wieder importieren. Bestehende Änderungen
+  bleiben revisionsgeprüft, Sammel-/Planänderungen mit Vorschau.
+- Neuer Bereich Gemeinsam: Zahlende Person, frei wählbare Prozentanteile, persönliche
+  Belastungen, gegenseitiger Saldo und bereits bezahlte Ausgleiche. Beide sehen nur die
+  ausdrücklich gemeinsamen Vorgänge. Korrektur, Löschen, Rücknahme sowie CSV/ODS-Export.
+- Optionale Hey-Nabu-Anbindung mit profilgebundenem, sperrbarem Schreibzugang und fertig
+  erzeugten HA-Dateien. Sprache kann neue persönliche Buchungen erfassen; keine Finanzdaten
+  abfragen. Einmalige HA-Einrichtung nötig, keine automatische Sprechererkennung.
+- Vor dem Update vollständiges HA-App-Backup anlegen. Gemeinsame Daten liegen zusätzlich
+  unter `/data/shared`; persönlicher ZIP-Export ersetzt dieses Vollbackup nicht. Private
+  0.2.x-Daten werden nicht erneut aufgeteilt oder automatisch gemeinsam sichtbar.
+
 ## 0.2.1
 
 - Importstatus direkt sichtbar: Laufzeit des Imports und einzelner KI-Aufrufe, Arbeitsschritt,

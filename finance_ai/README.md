@@ -1,7 +1,7 @@
 # Finanzhaushalt AI
 
 Deutschsprachiger Finanzhaushalt für Home Assistant OS: Planung, Haushaltsbuch,
-Kontostände, CSV/ODS/XLSX-Import, Diktat und optionale OVHcloud-KI.
+Kontostände, CSV/ODS/XLSX-Import, Diktat, gemeinsames Ausgabenbuch und optionale OVHcloud-KI.
 
 **Installation über den Home-Assistant-App-Store**, wie bei Automation AI:
 [App-Store öffnen](https://my.home-assistant.io/redirect/supervisor_store/) → Katalog
@@ -15,7 +15,15 @@ Zugriffe anderer Apps dabei erhalten. Quellcode wird nicht im App-Katalog vertei
 
 Nach Installation die HA-Nutzer-ID der Besitzerperson in `owner_user_id` setzen.
 Ohne gültige Ingress-Identität besteht kein Zugriff. Eine zweite HA-Person kann
-anschließend ausdrücklich freigeschaltet werden. Jede HA-Anmeldung sieht ausschließlich ihr eigenes Finanzprofil.
+anschließend ausdrücklich freigeschaltet werden. Jede HA-Anmeldung sieht ihr eigenes
+Finanzprofil und die ausdrücklich unter **Gemeinsam** eingetragenen Vorgänge. Andere
+private Buchungen bleiben unsichtbar. Kostenanteile und gegenseitiger Ausgleich werden
+centgenau berechnet.
+
+Auf der kompakten Startseite öffnet **KI-Chat** die Eingabe zum Schreiben oder Diktieren.
+Eindeutige Ausgaben wie „Trage für heute 24,20 Euro ein für Kuchen“ werden direkt gespeichert.
+Kategorien und eigene Zusatzspalten lassen sich ebenfalls per Chat anlegen. Unter
+**Einstellungen → Hey Nabu** erzeugt die App die optionale HA-Einrichtung für Sprachbuchungen.
 
 Standardmodell: **Qwen3.8-27B**, `reasoning_effort: xhigh`. Manuelle Funktionen
 arbeiten unabhängig von KI und Bankzugang. Details: [Benutzeranleitung](DOCS.md).

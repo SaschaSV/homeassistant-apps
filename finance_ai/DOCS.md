@@ -1,5 +1,65 @@
 # Einrichten und bedienen
 
+## Neu ab 0.3.0: Chat und gemeinsame Ausgaben
+
+Auf der Startseite **KI-Chat** öffnen und beispielsweise „Trage für heute 24,20 Euro
+ein für Kuchen“ schreiben oder diktieren. Ohne ausdrückliche Planung gehört eine tatsächliche
+Ausgabe ins persönliche Haushaltsbuch. Ohne Datum gilt heute; eine Kategorie darf fehlen.
+Einfache eindeutige Buchungen werden lokal ausgeführt, freie Formulierungen über den
+eingerichteten KI-Zugang. Bestätigung und Rückgängig beziehen sich auf den gespeicherten Eintrag.
+Beispiele: „Lege eine Kategorie Kuchen an“, „Lege eine Textspalte Anlass im Haushaltsbuch an“.
+Zusatzspalten unter **Einstellungen → Zusatzspalten** verwalten und im Eintragsformular füllen.
+CSV/ODS kennzeichnen sie als „Zusatzspalte: Name“. Beim Import eigener Exporte müssen die
+Spalten im Zielprofil vorhanden sein; die persönliche ZIP-Sicherung enthält ihre Definitionen.
+
+**Gemeinsam** steht bereit, sobald die zweite HA-Person freigeschaltet ist. Gemeinsame
+Ausgabe erfassen, Zahlende Person wählen und bei Bedarf den eigenen Prozentsatz ändern.
+Der Rest gehört zur anderen Person, standardmäßig 50/50. Jeder Kostenanteil erscheint im
+eigenen Haushaltsbuch und wird dort unter **Gemeinsam** bearbeitet. Die persönlichen
+Bank-/KI-Zugänge, Chats und übrigen Buchungen werden nicht geteilt. Bestehende private oder
+importierte Bankbuchungen werden nicht automatisch in gemeinsame Vorgänge umgewandelt:
+denselben Einkauf nicht zusätzlich vollständig privat buchen; eine vorhandene Doppelbuchung
+gezielt prüfen und korrigieren. Ein automatischer Abgleich mit gemeinsamen Käufen ist nicht enthalten.
+
+Der offene Ausgleich berücksichtigt alle erfassten Zeiträume, unabhängig vom Listenfilter.
+Nur eine **bereits erfolgte** Überweisung als Ausgleich erfassen; die App führt keine Zahlung
+aus. Ausgleich wird nicht noch einmal als Konsum gezählt. Beide Personen können gemeinsame
+Vorgänge korrigieren; Versionen, Rücknahme und der eigene Kostenanteil werden mitgeführt.
+Gemeinsame Ausgaben und Zahlungen separat als CSV oder ODS exportieren.
+
+## Optional: Hey Nabu für neue Buchungen
+
+Unter **Einstellungen → Hey Nabu → Assist-Einrichtung vorbereiten** erzeugt jede Person
+aus ihrer eigenen HA-Anmeldung eine Paketdatei und eine Schlüsselzeile. Die App verändert
+die HA-Konfiguration nicht selbst und benötigt keine zusätzlichen Administratorrechte.
+
+1. In `/config/configuration.yaml` unter dem vorhandenen `homeassistant:`-Abschnitt
+   `packages: !include_dir_named packages` ergänzen, falls Packages noch nicht aktiviert sind.
+   Vorhandene Package-Konfiguration weiterverwenden; keinen zweiten Abschnitt erzeugen.
+2. Die Paketdatei nach `/config/packages/finance_ai_person1.yaml` bzw. `finance_ai_person2.yaml`
+   kopieren. Nur die heruntergeladene Schlüsselzeile zu `/config/secrets.yaml` hinzufügen;
+   bestehende Inhalte erhalten. Dateieditor oder vorhandenes Terminal verwenden.
+3. HA-Konfiguration prüfen und Home Assistant neu starten. In der Assist-Pipeline lokale
+   Befehle bevorzugen, wenn ein externer Conversation-Agent verwendet wird.
+4. „Hey Nabu, mein Haushaltsbuch, trage für heute 24,20 Euro ein für Kuchen“ sagen.
+   Für das zweite Profil lautet der Einstieg „Saskias Haushaltsbuch“. Einfache Buchungen
+   werden sofort bestätigt; bei längerer KI-Verarbeitung bestätigt Assist den Eingang,
+   der Abschluss erscheint in der App unter **Hey Nabu → Letzte Sprachaufträge**.
+
+Der gewählte Befehl legt das Profil fest. Ein gemeinsam benutzter Lautsprecher erkennt
+die Person nicht zuverlässig; jede Person in Hörweite könnte diese Befehle auslösen.
+Der Zugang darf daher nur neue persönliche Buchungen anlegen, keine Daten lesen oder
+vorhandene Einträge ändern. Schlüssel vertraulich behandeln. **Zugang sperren** beendet
+auch offene Aufträge; **Zugang ersetzen** verlangt die neue Schlüsselzeile in HA.
+Für Planung, gemeinsame Ausgaben und weitere Änderungen den authentifizierten App-Chat nutzen.
+
+Vor dem Update ganz `/data` mit beiden persönlichen Beständen, Schlüsseln, Altarchiv und
+dem neuen gemeinsamen Bestand `/data/shared` sichern. Ein persönlicher ZIP-Export enthält
+eigene Anteile, aber nicht das ganze gemeinsame Ausgabenbuch und keine Sprachschlüssel.
+Nach persönlichem Restore werden gemeinsame Anteile aus der gemeinsamen Quelle rekonstruiert.
+Für gemeinsamen Vollrestore das zusammengehörige HA-App-Backup verwenden. Alte Images
+nicht auf Schema 3 starten; Rollback benötigt ein vollständiges Backup von vor dem Update.
+
 ## Installation über den Home-Assistant-App-Store
 
 Die Installation erfolgt über die Oberfläche, wie bei Automation AI. Ein Terminal
