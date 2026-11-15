@@ -300,3 +300,26 @@ Planung enthält monatliche/jährliche Einnahmen und Ausgaben als Schätzung. Ja
 werden auf zwölf Monate umgelegt. ODS-/XLSX-/CSV-Budgettabellen direkt dort importieren.
 Bei pausiertem Import die sichtbare Meldung beachten und später fortsetzen.
 Rollback ausschließlich mit passendem vollständigem Backup, nicht nur altem Image.
+
+
+## Import- und Exportstatus ab 0.2.1
+
+Nach Dateiauswahl erscheint die Upload-/Lesezeit. Danach zeigt die Statuskarte Dateiname,
+aktuellen Schritt und Laufzeit. Falls KI verwendet wird, erscheinen Modell, Dauer des
+aktuellen Aufrufs und das konfigurierte Zeitlimit. Qwen meldet keine verlässliche Restzeit;
+daher gibt es für die Modellberechnung keine geschätzte Prozent- oder Restzeitangabe.
+Lokale Prüf- und Speicherfortschritte beruhen auf tatsächlich verarbeiteten Zeilen/Einträgen.
+
+Das Importfenster kann geschlossen werden: Status und Abschluss bleiben in der Hauptansicht
+sichtbar. „Importdetails öffnen“ führt zurück zum Auftrag. Nach Neuladen wird der letzte
+Auftrag wieder angezeigt. Bei einer unterbrochenen Statusverbindung zeigt die App den letzten
+bestätigten Stand mit Warnung und prüft automatisch erneut. Nicht erneut hochladen, nur weil
+Qwen noch antwortet. Bei Dienstfehlern oder Zeitlimit pausiert der Auftrag; später fortsetzen.
+Abbrechen beendet die laufende Anfrage und verhindert weitere Übernahmen. Bereits gespeicherte
+Teilmengen bleiben erhalten und können über die Importdetails zurückgenommen werden.
+
+„Import abgeschlossen“ nennt die übernommene Anzahl; null neue Einträge werden ausdrücklich
+benannt. „Deine Antwort ist erforderlich“ wartet auf die Rückfragen unten. Ein Export ist erst
+fertig, wenn die App die Dateierstellung bestätigt und die Datei an den Browser übergibt.
+Den Speicherort/Download steuert der Browser. CSV/ODS dienen dem Tabellenaustausch;
+für vollständige Historie/Herkunft den ZIP-Datenexport verwenden, für Secrets das HA-Vollbackup.

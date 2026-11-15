@@ -1,5 +1,16 @@
 # Änderungen
 
+## 0.2.1
+
+- Importstatus direkt sichtbar: Laufzeit des Imports und einzelner KI-Aufrufe, Arbeitsschritt,
+  Anfragezeitlimit, Zeilenzahlen und eindeutiger Abschluss, auch bei null neuen Einträgen.
+- Laufende Importe bleiben nach Schließen des Fensters oder Neuladen auffindbar;
+  unterbrochene Statusverbindungen werden erklärt und erneut abgefragt.
+- Abbrechen beendet den laufenden Aufruf; Fortsetzen bleibt möglich. Neue Uploads warten
+  nicht hinter einer langen KI-Anfrage. Gesamtzeitlimit je Modellanfrage wird durchgesetzt.
+- CSV-/ODS-Exporte aller Datenbereiche sowie ZIP-Sicherung/-Wiederimport melden Fortschritt
+  und Abschluss. Eigene Tabellenexporte werden ohne unnötigen KI-Aufruf erkannt.
+
 ## 0.2.0
 
 - Jahresbudget mit monatlichen/jährlichen Einnahmen und Ausgaben, Monatsbedarf und Sparüberschuss.
