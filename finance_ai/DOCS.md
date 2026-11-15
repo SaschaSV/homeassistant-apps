@@ -22,8 +22,7 @@ auf 64-Bit-HAOS (aarch64 oder amd64).
 4. **Finanzhaushalt AI → Installieren** wählen.
 5. In der App unter **Konfiguration** `owner_user_id` mit der 32-stelligen HA-ID
    der Besitzerperson füllen und speichern. Die ID in **Einstellungen → Personen →
-   Benutzer** beim gewünschten Benutzer nachsehen; bei Bedarf den erweiterten Modus
-   im eigenen HA-Profil einschalten. Nicht den Anzeigenamen verwenden.
+   Benutzer** beim gewünschten Benutzer nachsehen. Nicht den Anzeigenamen verwenden.
 6. **Starten**, **Beim Booten starten** und **In der Seitenleiste anzeigen** aktivieren.
    Automatische Updates ausgeschaltet lassen; Updates nach einem Backup ausführen.
    **Weboberfläche öffnen**. Für KI-Imports, Chat und Diktat anschließend den OVH-Key
@@ -205,11 +204,11 @@ echo 'App in den verschlüsselten HA-Backupplan aufnehmen. Spätere Updates mit 
    Katalog `https://github.com/SaschaSV/homeassistant-apps`. Zuerst GHCR-Lesezugang
    im Supervisor setzen. Keinen öffentlichen Imagezugriff aktivieren.
 2. Unter App-Konfiguration `owner_user_id` auf die 32-stellige HA-Nutzer-ID setzen.
-   ID in der HA-Benutzerverwaltung mit erweitertem Modus prüfen. App starten und über
+   ID unter **Einstellungen → Personen → Benutzer** prüfen. App starten und über
    **Weboberfläche öffnen** aufrufen. Fehlende Identität führt zu einer Zugriffssperre.
 3. Eine erste Ausgabe benötigt Betrag und Beschreibung. Profile heißen zunächst
-   „Ich“ und „Partnerin“; unter Einstellungen umbenennen. Eine zweite HA-ID gezielt zulassen.
-   Beide berechtigten Personen können beide Profile sehen.
+   „Ich“ und „Saskia“; unter Einstellungen umbenennen. Eine zweite HA-ID gezielt zulassen.
+   Jede berechtigte Person sieht ausschließlich ihr eigenes Profil.
 4. Optional unter **KI & Sprache** die Übermittlung notwendiger Auszüge an OVHcloud
    aktivieren, Key hinterlegen, Modellkatalog und Verbindung testen. Standard Qwen3.8-27B/xhigh
    bleibt erhalten. Keine API-Schlüssel im Chat eingeben.
@@ -287,3 +286,17 @@ ist keine Schutzgrenze gegen den Hostadministrator.
 
 Der persönliche Sparkassen-Zugang, HAOS-Update/Restore, privater Registry-Pull und das echte
 Android-Mikrofon müssen bei der gesondert beauftragten Einrichtung abgenommen werden.
+
+## Update 0.2.0: private Profile und Jahresbudget
+
+Vor Update ein vollständiges HA-Backup erstellen. Jede HA-Anmeldung sieht anschließend
+nur ihr eigenes Profil. Gemeinsame Altbeträge werden nach gespeicherten Anteilen
+centgenau aufgeteilt; das vollständige Altarchiv bleibt geschützt erhalten. Alte Chats,
+Rohimporte und Bankzugänge werden nicht verteilt. Bankzugänge je Person neu verbinden;
+Saskia hinterlegt ihre eigene KI-Verbindung. Ihre HA-ID unter „Profil & Zugriff“ einmalig
+zuordnen; eine bestehende Zuordnung kann gesperrt, aber nicht auf eine fremde ID umgebunden werden.
+
+Planung enthält monatliche/jährliche Einnahmen und Ausgaben als Schätzung. Jahreskosten
+werden auf zwölf Monate umgelegt. ODS-/XLSX-/CSV-Budgettabellen direkt dort importieren.
+Bei pausiertem Import die sichtbare Meldung beachten und später fortsetzen.
+Rollback ausschließlich mit passendem vollständigem Backup, nicht nur altem Image.

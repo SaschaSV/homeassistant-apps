@@ -15,7 +15,7 @@ Zugriffe anderer Apps dabei erhalten. Quellcode wird nicht im App-Katalog vertei
 
 Nach Installation die HA-Nutzer-ID der Besitzerperson in `owner_user_id` setzen.
 Ohne gültige Ingress-Identität besteht kein Zugriff. Eine zweite HA-Person kann
-anschließend ausdrücklich freigeschaltet werden. Beide sehen den gemeinsamen Bestand.
+anschließend ausdrücklich freigeschaltet werden. Jede HA-Anmeldung sieht ausschließlich ihr eigenes Finanzprofil.
 
 Standardmodell: **Qwen3.8-27B**, `reasoning_effort: xhigh`. Manuelle Funktionen
 arbeiten unabhängig von KI und Bankzugang. Details: [Benutzeranleitung](DOCS.md).

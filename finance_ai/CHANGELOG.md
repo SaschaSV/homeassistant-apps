@@ -1,5 +1,15 @@
 # Änderungen
 
+## 0.2.0
+
+- Jahresbudget mit monatlichen/jährlichen Einnahmen und Ausgaben, Monatsbedarf und Sparüberschuss.
+- ODS-Budgetimport mit Abschnitten ohne Datumsangaben; formatierte Leerbereiche verträglich lesen.
+- Importfortschritt und vorübergehende KI-Störungen sichtbar anzeigen; Fortsetzen möglich.
+- Private Datenbestände nach HA-Anmeldung; zweites Profil heißt Saskia.
+- Einmalige anteilige Übernahme bestehender Einträge, vollständiges geschütztes Altarchiv.
+- Vor Update vollständiges HA-App-Backup erstellen. Bankzugänge je Person neu verbinden;
+  Saskia richtet ihre eigene KI-Verbindung ein. Rollback nur mit passendem Vollbackup.
+
 ## 0.1.1
 
 Erste für die Installation vorgesehene Version. Der private Multiarch-Index bewahrt
