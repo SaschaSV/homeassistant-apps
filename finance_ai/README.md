@@ -3,9 +3,11 @@
 Deutschsprachiger Finanzhaushalt für Home Assistant OS: Planung, Haushaltsbuch,
 Kontostände, CSV/ODS/XLSX-Import, Diktat und optionale OVHcloud-KI.
 
-**Einrichtung mit einem eingefügten Befehlsblock:** Die [geführte Terminal-Anleitung](DOCS.md#geführte-installation-im-vorhandenen-terminal)
-übernimmt Katalog, Installation und Besitzerzuordnung. Ein vorhandener Registryzugang
-bleibt erhalten. Fehlt er, wird ein GitHub-Lesetoken verdeckt abgefragt.
+**Installation über den Home-Assistant-App-Store**, wie bei Automation AI:
+[App-Store öffnen](https://my.home-assistant.io/redirect/supervisor_store/) → Katalog
+aktualisieren → **Finanzhaushalt AI → Installieren**. Der einmalige private Registryzugang
+lässt sich ebenfalls über **⋮ → Registries** einrichten. Kein Terminal erforderlich.
+[Schritt-für-Schritt-Anleitung](DOCS.md#installation-über-den-home-assistant-app-store).
 
 Das Container-Package ist privat. Vor der Installation `ghcr.io` im Supervisor
 mit einem berechtigten PAT classic (`read:packages`) konfigurieren. Bestehende

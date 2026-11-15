@@ -1,6 +1,44 @@
 # Einrichten und bedienen
 
-## Geführte Installation im vorhandenen Terminal
+## Installation über den Home-Assistant-App-Store
+
+Die Installation erfolgt über die Oberfläche, wie bei Automation AI. Ein Terminal
+ist für diesen Weg nicht erforderlich. Voraussetzung: Home Assistant ab 2026.11.0
+auf 64-Bit-HAOS (aarch64 oder amd64).
+
+1. **Einstellungen → Apps → App installieren / App-Store (Marketplace)** öffnen.
+   [App-Store direkt öffnen](https://my.home-assistant.io/redirect/supervisor_store/).
+2. Über **⋮ → Nach Updates suchen / Aktualisieren** den Katalog neu laden.
+   Das vorhandene Repository `https://github.com/SaschaSV/homeassistant-apps`
+   enthält jetzt auch **Finanzhaushalt AI**. Falls es fehlt: **⋮ → Repositories**
+   öffnen und diese URL hinzufügen.
+3. Den privaten Imagezugang einmalig über **⋮ → Registries / Registrierungen**
+   einrichten: **Registry hinzufügen**, Server `ghcr.io`, Benutzer `SaschaSV`,
+   Passwort ein [GitHub PAT classic mit read:packages](https://github.com/settings/tokens/new?description=Home%20Assistant%20Finance%20AI&scopes=read:packages).
+   Den Token ausschließlich in dieses Passwortfeld eingeben. Einen bereits passenden
+   `ghcr.io`-Eintrag verwenden; bestehende Zugriffe anderer Apps erhalten. Das
+   GitHub-Kontopasswort ist dafür ungeeignet. Die Registry-Einrichtung erfolgt ebenfalls
+   in der HA-Oberfläche.
+4. **Finanzhaushalt AI → Installieren** wählen.
+5. In der App unter **Konfiguration** `owner_user_id` mit der 32-stelligen HA-ID
+   der Besitzerperson füllen und speichern. Die ID in **Einstellungen → Personen →
+   Benutzer** beim gewünschten Benutzer nachsehen; bei Bedarf den erweiterten Modus
+   im eigenen HA-Profil einschalten. Nicht den Anzeigenamen verwenden.
+6. **Starten**, **Beim Booten starten** und **In der Seitenleiste anzeigen** aktivieren.
+   Automatische Updates ausgeschaltet lassen; Updates nach einem Backup ausführen.
+   **Weboberfläche öffnen**. Für KI-Imports, Chat und Diktat anschließend den OVH-Key
+   in den Einstellungen der App hinterlegen und die Übermittlung aktivieren.
+
+Bei `unauthorized`/`denied` während der Installation den Eintrag für `ghcr.io` prüfen.
+Die Sichtbarkeit des Containerpakets bleibt privat.
+
+Der Registry-Dialog ist im [offiziellen HA-Handbuch](https://www.home-assistant.io/more-info/dockerhub-rate-limit/)
+beschrieben; für diese App ist der Server `ghcr.io`.
+
+<details>
+<summary>Optionale Terminal-Alternative für Administratoren</summary>
+
+### Alternative per Terminal
 
 Einmal diesen Block in **Terminal & SSH** oder **Advanced SSH & Web Terminal**
 einfügen. Er prüft die Architektur, ergänzt nur dieses App-Repository, verwendet
@@ -155,6 +193,9 @@ echo 'App in den verschlüsselten HA-Backupplan aufnehmen. Spätere Updates mit 
 # FINANCE-INSTALL-END
 
 ```
+
+</details>
+
 
 </details>
 
