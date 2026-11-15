@@ -1,5 +1,25 @@
 # Einrichten und bedienen
 
+## Neu ab 0.3.1: ODS-Import und Laufzeitanzeige
+
+Budgettabellen dürfen mehrere Blätter und nebeneinanderliegende Bereiche enthalten.
+Summen werden separat geprüft; sie werden nicht nochmals als Planpositionen erfasst.
+Unpassende Blätter werden mit Begründung angezeigt. Unklare Geldbeträge erscheinen
+als gezielte Rückfragen, klare Einträge werden übernommen.
+
+Die laufende Uhr zeigt Gesamtdauer und aktuelle KI-Anfrage, zusätzlich das bearbeitete
+Blatt. Es gibt keinen bewegten Fortschrittsbalken und keine erfundene Restzeit.
+Standardzeitlimit: 20 Minuten je KI-Anfrage, unter Einstellungen bis 60 Minuten
+änderbar. Qwen3.8-27B/xhigh bleibt unverändert. Frühere Anbieterfehler bleiben möglich;
+pausierte Aufträge lassen sich fortsetzen, bereits erkannte Blätter bleiben gespeichert.
+
+Nach dem Update den fehlgeschlagenen Import öffnen und **Fortsetzen** wählen. Sollte
+die Originaldatei inzwischen nach der eingestellten Aufbewahrungsfrist entfernt sein,
+dieselbe Datei nochmals hochladen und fortsetzen. Bei fehlenden gespeicherten
+Formelergebnissen die Datei in Calc/Excel neu berechnen und speichern. Die App führt
+keine Makros und keine beliebigen Tabellenfunktionen aus; nicht prüfbare Formeln
+führen nur für die betroffenen Bereiche zu Rückfragen.
+
 ## Neu ab 0.3.0: Chat und gemeinsame Ausgaben
 
 Auf der Startseite **KI-Chat** öffnen und beispielsweise „Trage für heute 24,20 Euro

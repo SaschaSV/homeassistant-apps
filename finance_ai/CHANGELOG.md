@@ -1,5 +1,23 @@
 # Änderungen
 
+## 0.3.1
+
+- ODS-, XLSX- und CSV-Import für nebeneinanderliegende Tabellen überarbeitet: mehrere
+  Positionen derselben Zeile werden getrennt übernommen, geprüft und zurückgenommen.
+- Kleine Arbeitsblätter vollständig an Qwen übergeben, unbekannte Blätter einzeln erkennen
+  und widersprüchliche Bereichszuordnungen einmal automatisch korrigieren. Unpassende
+  Blätter/Bereiche mit Begründung anzeigen; unklare Beträge bleiben gezielte Rückfragen.
+- Zwischen- und Gesamtsummen getrennt von Planpositionen prüfen, einschließlich Summen
+  über mehrere Spalten und Blätter. Gespeicherte Formel-Bezüge und Werte verwenden;
+  fehlende oder widersprüchliche Rechenergebnisse nicht als Ausgabe übernehmen.
+- KI-Zeitlimit standardmäßig 20 Minuten, einstellbar bis 60 Minuten. Das bisherige
+  Fünf-Minuten-Standardlimit wird automatisch angehoben; eigene andere Werte bleiben.
+  Ein früheres Zeitlimit des Anbieters kann weiterhin einen Auftrag pausieren.
+- Bewegten Importbalken entfernt. Laufende Zeit, aktuelle KI-Anfrage, Blatt und klares
+  Abschlussergebnis bleiben sichtbar. Bereits erkannte Blätter beim Fortsetzen erhalten.
+- Alte fehlgeschlagene ODS-Aufträge können ihre Formel-Bezüge aus der gespeicherten
+  Originaldatei nachlesen. Nach Ablauf der Aufbewahrung dieselbe Datei erneut hochladen.
+
 ## 0.3.0
 
 - Kompakte Startseite ohne Werbespruch, sichtbarer KI-Chat und Navigation zu fünf Bereichen.
