@@ -1,5 +1,13 @@
 # Änderungen
 
+## 1.0.7
+
+- Neuer Analysebericht unter Auswertung → Bericht & Gesundheit: Jahres- und Monatsvergleiche, gleiche Vergleichszeiträume, Trinktagmengen, Kalender und längste Trinkpausen.
+- Aktuelles Mengenprofil der letzten 28 und 90 Tage mit DGE-Orientierung, hohen Tagesmengen und höchster Summe in sieben aufeinanderfolgenden Tagen.
+- Gesundheitliche Einordnung nach aktuell geprüften DGE-/WHO-Quellen mit sichtbarem Fachstand und Rechenbasis. Keine Diagnose oder individuelle Erkrankungswahrscheinlichkeit.
+- Bericht lokal berechnet und bei Nachträgen aktualisiert; ausschließlich Konsummuster werden verwendet.
+- Eigene Druckdiagramme für A4/PDF sowie ein eigenständig lesbarer HTML-Bericht zum Speichern und Drucken.
+
 ## 1.0.6
 
 - Tage ohne Alkoholmenge gelten bis einschließlich heute automatisch als alkoholfrei. Manuelle Tagesbestätigung entfernt; Nachträge und Löschungen aktualisieren Kalender und Statistiken.

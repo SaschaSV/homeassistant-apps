@@ -146,3 +146,51 @@ HA-Backup erstellen. Die neue Version erscheint nach Aktualisierung des App-Kata
 das normale Prüfintervall kann die Anzeige verzögern. Alktracker aktualisiert keine
 Pakete oder eigenen Programmcode zur Laufzeit. Alte private Images nicht löschen,
 solange die dazugehörigen Backups noch benötigt werden.
+
+## Analysebericht und gesundheitliche Einordnung
+
+Unter **Auswertung → Bericht & Gesundheit** oder über die entsprechende Karte auf der
+Übersicht öffnet sich der Bericht. **Gesamter Verlauf** betrachtet die Zeit vom ersten
+vorhandenen Eintrag bis heute. **Gewählten Zeitraum auswerten** verwendet die Von-/Bis-
+Auswahl. Alle Werte werden aus dem aktuellen Bestand neu berechnet; frühere PDF-Werte
+werden nicht als zusätzliche Buchungen übernommen.
+
+Der Bericht enthält Jahres- und Monatsmengen, Trinktage und deren Verteilung, dieselben
+Vergleichsfenster pro Jahr, hohe Tagesmengen, Jahreskalender und die sechs längsten
+Trinkpausen. Teiljahre, Teilmonate und ein zusätzlicher Schalttag bleiben sichtbar.
+Pausen zählen beide Datumsgrenzen; Folgen an einer Auswahlgrenze sind entsprechend
+markiert. Wie im Tagebuch gelten fehlende Alkoholmengen bis heute als alkoholfrei.
+Nicht eingetragene Getränke würden deshalb Mengen unterschätzen und Pausen überschätzen.
+
+Das **aktuelle Risikoprofil** endet immer heute, unabhängig vom gewählten historischen
+Berichtszeitraum. Es zeigt die letzten 28 und 90 Tage. Bei kürzerem Verlauf wird das
+Fenster gekürzt; vor sieben Verlaufstagen erfolgt keine DGE-Einstufung. Wochenmittel =
+Gesamtgramm geteilt durch Kalendertage mal sieben. Das ist keine tatsächlich typische
+Woche. Hohe Tagesmengen und die höchste Sieben-Tage-Summe werden deshalb separat gezeigt.
+
+Die DGE-Mengenbereiche dienen als Orientierung für gesunde, nicht schwangere oder
+stillende Erwachsene: unter 27 g/Woche risikoarmer Bereich, 27–81 g moderater Bereich,
+über 81 g hoher Bereich. Kein Bereich ist gesundheitlich risikofrei. Gerundete Anzeigen
+ändern die Einordnung nicht; sie benutzt exakte Werte. Die WHO-Definition ab 60 g
+bezieht sich auf eine Trinkgelegenheit. Tagesmengen ab 60 g sind hier ein Mengenhinweis
+und keine nachgewiesenen Rauschtrink-Episoden. Die zusätzliche 80-g-Marke beschreibt
+die Daten und ist keine weitere medizinische Grenze.
+
+Die Einordnung nutzt ausschließlich das Konsummuster. Körperprofile, Krankheiten und
+Medikamente fließen nicht ein. Es werden keine Organschäden diagnostiziert und keine
+individuellen Erkrankungswahrscheinlichkeiten oder Abhängigkeitsdiagnosen berechnet.
+Quellen, Geltungsbereich und Fachstand stehen am Berichtende. Die App recherchiert nicht
+selbständig im Hintergrund; die hinterlegten Empfehlungen werden mit App-Updates geprüft.
+
+**Drucken / als PDF** öffnet den Druckdialog des Browsers, soweit die Webansicht dies
+unterstützt. **Bericht als Datei** erstellt einen HTML-Bericht mit Kalendern und Tabellen,
+der ohne Internetverbindung lesbar und in einem Browser als PDF druckbar ist. Persönliche
+Berichte wie Tagebuchexporte privat aufbewahren. Für die Berichtserstellung wird keine
+KI-/Cloudverbindung benötigt.
+
+Fachquellen (geprüft 16.11.2026):
+
+- [DGE: FAQ Alkohol](https://www.dge.de/gesunde-ernaehrung/faq/alkohol/)
+- [DGE: Alkoholkonsum in Deutschland, 2026](https://www.dge.de/presse/meldungen/2026/alkoholkonsum-in-deutschland/)
+- [WHO: Alcohol](https://www.who.int/news-room/fact-sheets/detail/alcohol)
+- [WHO: Heavy episodic drinking](https://www.who.int/data/gho/indicator-metadata-registry/imr-details/459?lang=en)
