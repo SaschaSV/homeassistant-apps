@@ -35,22 +35,36 @@ Nur ein Datum bekannt: Uhrzeit unbekannt lassen. Für Intervalle werden Mengen n
 tatsächlicher Dauer auf lokale Tage verteilt. Mehrdeutige Uhrzeiten während der
 Zeitumstellung erfordern die Auswahl der ersten oder zweiten Uhrzeit.
 
-**Alles erfasst** schließt einen Tag/Zeitraum ab. Leere Tage darin werden ausdrücklich
-als alkoholfrei bestätigt. Ein leeres Tagebuch allein und ein 0,0-%-Getränk beweisen
-keinen alkoholfreien Tag. Neue Einträge öffnen den Tagesabschluss wieder.
+**Tage ohne eingetragene Alkoholmenge gelten bis einschließlich heute automatisch als
+alkoholfrei.** Es gibt keine manuelle Bestätigung und keinen Tagesabschluss mehr.
+Ein nachträglich gespeichertes Getränk ändert Tagesstatus, Kalender, Statistiken und
+Streak sofort. Beim Löschen der letzten Alkoholmenge wird der Tag wieder alkoholfrei.
+Zukünftige Tage zählen nicht mit.
 
-Auswertungen nennen ihre Abdeckung und Nenner. Durchschnitte vollständiger Tage
-berücksichtigen ausschließlich deren Mengen. Monatsdurchschnitte benötigen ganze,
-abgeschlossene und vollständig erfasste Monate. Änderungen und Rücknahmen stehen
-unter Einstellungen → Daten & Sicherung. Bei späteren Änderungen wird eine veraltete
-Rücknahme abgewiesen, statt Daten zu überschreiben.
+Das Dashboard zeigt die aktuelle alkoholfreie Folge bis heute, auch über den
+Jahreswechsel hinweg. Der heutige Tag zählt mit, solange kein Alkohol eingetragen ist;
+ein Eintrag heute setzt den aktuellen Streak auf 0. Die längste Folge bezieht sich
+auf den gewählten Auswertungszeitraum. Ohne bisherigen Verlauf beginnt die aktuelle
+Folge am 1. Januar des laufenden Jahres.
+
+Ein **Bieräquivalent entspricht 20 g Reinalkohol**, ungefähr 500 ml Bier mit 5 Vol.-%.
+Die Anzeige wird wie Gramm- und Durchschnittswerte auf ganze Zahlen gerundet.
+Exakte Eingaben, Berechnungen und Exporte bleiben unverändert präzise. Die geschätzte
+Promillekurve und ihre Modellparameter behalten die erforderlichen Nachkommastellen.
+
+Das Wochentagsmuster zeigt je Wochentag Gesamtmenge, durchschnittliche Gramm je Tag und
+Trinktage im Verhältnis zu allen Tagen im Zeitraum bis heute. Tage mit 0 g fließen in
+den Durchschnitt ein. Monatsdurchschnitte verwenden abgeschlossene Kalendermonate.
 
 ## Optionale KI
 
 In Einstellungen → KI die Übermittlung bestätigen, den OVH-Key eingeben und speichern.
 Anschließend **Verbindung testen**. Vorgabe: `Qwen3.8-27B`, `xhigh`, offizieller
 OpenAI-kompatibler OVH-Endpunkt. Tests prüfen Tool Calling und strukturierte Ausgabe.
-Ein Fehler führt nicht zum stillen Modellwechsel. Das angegebene Tokenbudget begrenzt
+Ein Fehler führt nicht zum stillen Modellwechsel. Der Timeout in Sekunden hat keine
+obere Eingabegrenze. Während einer KI-Anfrage zeigt die App die verstrichenen Sekunden;
+der Auftrag läuft im Hintergrund und sein Status wird regelmäßig abgefragt. Abbrechen
+bleibt möglich. Die Server und Netze des Anbieters können eigene Grenzen haben. Das angegebene Tokenbudget begrenzt
 Anfragen; fehlende Tarifdaten werden als unbekannte Kosten ausgewiesen.
 
 Beispiel: „Heute zwei Bier, jeweils 330 ml, 5 Prozent.“ Fehlende Uhrzeit verhindert
@@ -86,7 +100,11 @@ und keine vorab angesammelte Abbau-Gutschrift. Prognosen nehmen keine weiteren G
 ## Export, Import und Wiederherstellung
 
 Auswertung → Export verwendet den gewählten Zeitraum inklusive Start und Ende.
-Einstellungen → Daten & Sicherung bietet den Gesamtexport. JSON enthält Ereignisse,
+Einstellungen → Daten & Sicherung bietet den Gesamtexport. Nach dem Erstellen öffnet
+sich **Export speichern** mit **Datei herunterladen** sowie, wenn vom Browser
+unterstützt, **Datei teilen / speichern**. Falls die Home-Assistant-Webansicht keinen
+Download öffnet, zeigt **Exporttext anzeigen** den vollständigen Text zum Auswählen
+und Kopieren. Die App bleibt dabei geöffnet und zeigt Exportfehler verständlich an. JSON enthält Ereignisse,
 Vorlagen, Tagesabdeckung und Profilhistorie. CSV enthält Ereignisse und Tagesabdeckung.
 Normale Exporte enthalten keine Keys. Dateien mit Trink-/Profildaten privat aufbewahren.
 
@@ -106,8 +124,7 @@ ignoriert. Tabulatoren, Semikolon oder Komma als Trennzeichen und Dezimalkomma s
 Datumswerte dürfen YYYY-MM-DD, DD.MM.YYYY oder DD/MM/YYYY verwenden. Die Grammmenge
 bleibt eine Tageszusammenfassung mit Getränkeanzahl; einzelne ml, Vol.-% und Uhrzeiten
 werden nicht erfunden. Die Mengen erscheinen in den Auswertungen und lassen sich im
-Tagebuch korrigieren. 0 g bestätigt keinen alkoholfreien Tag; den Tagesabschluss bei
-Bedarf selbst bestätigen. Bereits vorhandene einzelne Einträge am selben Tag würden
+Tagebuch korrigieren. Tage mit 0 g gelten automatisch als alkoholfrei. Bereits vorhandene einzelne Einträge am selben Tag würden
 zusätzlich zählen – daher vor Bestätigung auf Überschneidungen achten.
  Identische IDs werden
 dedupliziert. Abweichende vorhandene IDs werden nicht still überschrieben. Für eine

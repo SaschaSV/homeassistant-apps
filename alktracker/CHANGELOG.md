@@ -1,5 +1,13 @@
 # Änderungen
 
+## 1.0.6
+
+- Tage ohne Alkoholmenge gelten bis einschließlich heute automatisch als alkoholfrei. Manuelle Tagesbestätigung entfernt; Nachträge und Löschungen aktualisieren Kalender und Statistiken.
+- Wochentagsmuster berücksichtigt alle Tage und zeigt Gesamtmenge, Durchschnitt sowie Trinktage statt nur manuell abgeschlossener Tage.
+- Aktueller alkoholfreier Streak und Bieräquivalente direkt auf dem Dashboard. Ein Bieräquivalent entspricht 20 g Reinalkohol. Verbrauchswerte werden als ganze Zahlen angezeigt; Daten und Exporte bleiben exakt.
+- KI-Timeout ohne obere Eingabegrenze; Sekundenanzeige während der Bearbeitung und Statusabfrage für längere Hintergrundaufträge.
+- Export mit vorbereitetem Download, Dateifreigabe auf unterstützten Geräten und vollständiger Textansicht als Alternative innerhalb der Home-Assistant-Webansicht.
+
 ## 1.0.5
 
 - Ein ausdrücklich bereitgestellter Verlauf wird beim ersten Start des privaten Updates automatisch in den bestehenden Bestand übernommen.
