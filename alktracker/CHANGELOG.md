@@ -1,5 +1,11 @@
 # Änderungen
 
+## 1.0.5
+
+- Ein ausdrücklich bereitgestellter Verlauf wird beim ersten Start des privaten Updates automatisch in den bestehenden Bestand übernommen.
+- Vorhandene Modellprofile, Einstellungen und Vorlagen bleiben erhalten. Bereits übernommene Daten werden bei Neustarts nicht erneut angelegt.
+- Einträge werden vor der Übernahme validiert und die Datenbank automatisch lokal gesichert. Die Übernahme erfolgt gemeinsam in einer Transaktion.
+
 ## 1.0.4
 
 - Speichern und Öffnen der Formulare funktionieren auch ohne `crypto.randomUUID`, etwa in älteren Android-WebViews und bei lokalem HTTP-Zugriff.
