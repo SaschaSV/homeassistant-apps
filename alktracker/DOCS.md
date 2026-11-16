@@ -27,7 +27,7 @@ und Ingress-Sitzung neu öffnen. Fehlende Identitätsheader erlauben ausdrückli
 
 Eine Vorlage öffnet ein Bearbeitungsblatt. Menge, Stärke, Anzahl und Datum prüfen und
 speichern. Mehrere gleiche Getränke werden einzeln gespeichert und können einzeln
-korrigiert werden. Eine Eintragsänderung verändert keine Vorlage. **Als Standard
+korrigiert werden. Eine Eintragsänderung verändert keine Vorlage. Unter Einstellungen → Vorlagen öffnet **Bearbeiten** die Standardwerte. **Nach oben / Nach unten** ändert die Reihenfolge auch in der Schnellauswahl; **Ausblenden** entfernt eine Vorlage aus der Schnellauswahl, ohne Einträge zu löschen. **Als Standard
 speichern** verändert nur zukünftige Vorbelegungen. Mischgetränke werden entweder aus
 Bestandteilen oder anhand Gesamtmenge und Gesamtstärke berechnet, nie doppelt.
 
@@ -66,7 +66,7 @@ Android-Tastaturdiktat bleiben nutzbar. Es wird keine Browser-/Google-Spracherke
 
 ## Optionale Alkoholkurve
 
-Erst bei Nutzung ein Modellprofil anlegen. Watson benötigt Gewicht, Größe, Alter und
+Erst bei Nutzung ein Modellprofil anlegen. **Profil speichern** bestätigt die Speicherung; beim nächsten Öffnen sind Gewicht, Größe und Alter wieder vorausgefüllt. Watson benötigt Gewicht, Größe, Alter und
 Standdatum; der manuelle Widmark-Modus nur Gewicht und Verteilungsfaktor. Die historische
 Watson-Einteilung beschreibt körperbezogene Gruppenformeln, keine Geschlechtsidentität.
 Kein Modus ist persönlich kalibriert. Default: Abbau 0,15 ‰/h, Aufnahmefenster 60 Minuten,
@@ -90,7 +90,26 @@ Einstellungen → Daten & Sicherung bietet den Gesamtexport. JSON enthält Ereig
 Vorlagen, Tagesabdeckung und Profilhistorie. CSV enthält Ereignisse und Tagesabdeckung.
 Normale Exporte enthalten keine Keys. Dateien mit Trink-/Profildaten privat aufbewahren.
 
-Importdatei auswählen, Vorschau prüfen und gemeinsam bestätigen. Identische IDs werden
+**Einträge hinzufügen** übernimmt CSV- oder Alktracker-JSON-Daten zusätzlich zum bestehenden
+Bestand. **Alktracker-Sicherung wiederherstellen** ersetzt dagegen alle Einträge,
+Tagesabschlüsse, Vorlagen und Profile durch einen vollständigen Alktracker-JSON-Export;
+KI-Einstellungen und Schlüssel bleiben erhalten. Eine CSV ist keine vollständige Sicherung.
+
+Datei auswählen, **Vorschau anzeigen** drücken, Angaben prüfen und erst dann bestätigen.
+Beim Wiederherstellen zusätzlich das Ersetzen des Bestands bestätigen. Der Dateidialog
+zeigt alle Dateitypen, damit Android CSV-Dateien nicht wegen eines falschen Dateityps
+ausgraut; die App prüft den tatsächlichen Inhalt.
+
+**Alcotrack Pro:** Der Tagesexport mit den Überschriften `Tage`, `Getränke`,
+`Alkoholkonsum [g]` und optional `Ausgaben [€]` wird direkt erkannt. Ausgaben werden
+ignoriert. Tabulatoren, Semikolon oder Komma als Trennzeichen und Dezimalkomma sind erlaubt.
+Datumswerte dürfen YYYY-MM-DD, DD.MM.YYYY oder DD/MM/YYYY verwenden. Die Grammmenge
+bleibt eine Tageszusammenfassung mit Getränkeanzahl; einzelne ml, Vol.-% und Uhrzeiten
+werden nicht erfunden. Die Mengen erscheinen in den Auswertungen und lassen sich im
+Tagebuch korrigieren. 0 g bestätigt keinen alkoholfreien Tag; den Tagesabschluss bei
+Bedarf selbst bestätigen. Bereits vorhandene einzelne Einträge am selben Tag würden
+zusätzlich zählen – daher vor Bestätigung auf Überschneidungen achten.
+ Identische IDs werden
 dedupliziert. Abweichende vorhandene IDs werden nicht still überschrieben. Für eine
 vollständige Wiederherstellung den vollständigen JSON-Export wählen; ein Zeitraumexport
 ist dafür ungeeignet. Vor Import wird automatisch ein konsistenter lokaler

@@ -1,7 +1,7 @@
 name: Alktracker
 slug: alktracker
 description: Privates Alkoholtagebuch mit nachvollziehbarer Erfassung und Auswertung
-version: 1.0.3
+version: 1.0.4
 url: https://github.com/SaschaSV/homeassistant-apps
 arch:
 - aarch64
