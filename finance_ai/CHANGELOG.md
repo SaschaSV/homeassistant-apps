@@ -1,5 +1,18 @@
 # Änderungen
 
+## 0.3.2
+
+- Importmeldungen stehen nur noch im Importfenster. Die kompakte Meldung lässt sich
+  schließen. Frühere Aufträge bleiben im Importverlauf und können dort fortgesetzt werden.
+- Die App bestätigt die gespeicherte Datei vor dem Einlesen. Wenn die Bestätigung ausbleibt,
+  sendet die App die Datei einmal erneut. Derselbe Inhalt mit gleichem Kontext erzeugt
+  keine doppelten Buchungen.
+- Das Importziel steht direkt bei der Dateiauswahl. CSV-Altbestände mit Excel-Trennzeichenzeile,
+  UTF-16-BOM, Vorspann und eindeutigen Dezimalpunkten werden lokal gelesen.
+- Qwen bekommt begrenzte Stichproben und kann eine unvollständige Zuordnung korrigieren.
+  Die App empfängt strukturierte Importantworten schrittweise und prüft sie vollständig.
+  Bei einem Ausfall der KI-Zuordnung einzelner Buchungen werden eindeutige Einträge übernommen.
+
 ## 0.3.1
 
 - ODS-, XLSX- und CSV-Import für nebeneinanderliegende Tabellen überarbeitet: mehrere

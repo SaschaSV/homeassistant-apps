@@ -1,5 +1,14 @@
 # Einrichten und bedienen
 
+## CSV-Altbestand importieren
+
+Unter **Daten und Export** das Ziel **Haushaltsbuch** auswählen und die CSV öffnen.
+Die App zeigt Übertragung, Einlesen und gegebenenfalls Qwen-Zuordnung als getrennte Schritte.
+Bei einer verlorenen Upload-Bestätigung lässt sich dieselbe Datei erneut senden.
+Mit **×** schließt du die Meldung. Unter **Importverlauf** kannst du den Auftrag später
+wieder öffnen und gegebenenfalls fortsetzen. Dieselbe Datei mit demselben Kontext wird
+dem vorhandenen Auftrag zugeordnet.
+
 ## Neu ab 0.3.1: ODS-Import und Laufzeitanzeige
 
 Budgettabellen dürfen mehrere Blätter und nebeneinanderliegende Bereiche enthalten.
@@ -382,21 +391,17 @@ Bei pausiertem Import die sichtbare Meldung beachten und später fortsetzen.
 Rollback ausschließlich mit passendem vollständigem Backup, nicht nur altem Image.
 
 
-## Import- und Exportstatus ab 0.2.1
+## Import- und Exportstatus
 
-Nach Dateiauswahl erscheint die Upload-/Lesezeit. Danach zeigt die Statuskarte Dateiname,
-aktuellen Schritt und Laufzeit. Falls KI verwendet wird, erscheinen Modell, Dauer des
-aktuellen Aufrufs und das konfigurierte Zeitlimit. Qwen meldet keine verlässliche Restzeit;
-daher gibt es für die Modellberechnung keine geschätzte Prozent- oder Restzeitangabe.
-Lokale Prüf- und Speicherfortschritte beruhen auf tatsächlich verarbeiteten Zeilen/Einträgen.
+Nach Dateiauswahl zeigt die kleine Statusanzeige Dateiname, aktuellen Schritt und Laufzeit.
+Bei Qwen-Anfragen siehst du zusätzlich deren Dauer und das konfigurierte Zeitlimit.
 
-Das Importfenster kann geschlossen werden: Status und Abschluss bleiben in der Hauptansicht
-sichtbar. „Importdetails öffnen“ führt zurück zum Auftrag. Nach Neuladen wird der letzte
-Auftrag wieder angezeigt. Bei einer unterbrochenen Statusverbindung zeigt die App den letzten
-bestätigten Stand mit Warnung und prüft automatisch erneut. Nicht erneut hochladen, nur weil
-Qwen noch antwortet. Bei Dienstfehlern oder Zeitlimit pausiert der Auftrag; später fortsetzen.
+Das Importfenster kann geschlossen werden, während der Auftrag weiterläuft. Unter
+**Importverlauf** die Datei auswählen, um Status oder Ergebnis zu sehen. Die Anzeige lässt
+sich mit **×** schließen. Bei einer unterbrochenen Statusverbindung prüft die App erneut.
+Bei Dienstfehlern oder Zeitlimit pausiert der Auftrag und lässt sich später fortsetzen.
 Abbrechen beendet die laufende Anfrage und verhindert weitere Übernahmen. Bereits gespeicherte
-Teilmengen bleiben erhalten und können über die Importdetails zurückgenommen werden.
+Teilmengen können über die Importdetails zurückgenommen werden.
 
 „Import abgeschlossen“ nennt die übernommene Anzahl; null neue Einträge werden ausdrücklich
 benannt. „Deine Antwort ist erforderlich“ wartet auf die Rückfragen unten. Ein Export ist erst
