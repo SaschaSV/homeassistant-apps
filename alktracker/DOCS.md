@@ -194,3 +194,24 @@ Fachquellen (geprüft 16.11.2026):
 - [DGE: Alkoholkonsum in Deutschland, 2026](https://www.dge.de/presse/meldungen/2026/alkoholkonsum-in-deutschland/)
 - [WHO: Alcohol](https://www.who.int/news-room/fact-sheets/detail/alcohol)
 - [WHO: Heavy episodic drinking](https://www.who.int/data/gho/indicator-metadata-registry/imr-details/459?lang=en)
+
+## Bezugszeiträume und die längsten Streaks
+
+Die Statistik öffnet sich mit **Dieses Jahr**, vom 1. Januar des aktuellen Jahres
+bis heute. Das Jahr wird automatisch aus dem aktuellen Berlin-Datum bestimmt. Auch
+bei offenbleibender App wechselt eine aktive Jahresvorgabe zum neuen Jahr. Manuell
+gewählte Datumsgrenzen bleiben erhalten. Die Kennzahlen tragen ihr Bezugsjahr;
+bei einer Auswahl über mehrere Jahre wird die Jahresspanne angezeigt.
+
+Die Übersicht zeigt für den aktuellen Monat sowohl Gramm als auch Bieräquivalente.
+Der laufende Monat bleibt als solcher mit Monat und Jahr beschriftet, auch wenn für
+das Jahresdiagramm ein anderes Jahr gewählt wurde. Die Umrechnung lautet:
+**Alkoholmenge ÷ 20 g = Bieräquivalente**, anschließend ganzzahlig gerundet.
+Beispiel: 1.000 g ergeben 50 Äquivalente. Die interne Rechnung bleibt exakt.
+
+Unter **Auswertung → Statistik** steht außerdem die Rangliste der **fünf längsten
+alkoholfreien Streaks seit dem 01.01.2024**. Sie verwendet immer den gesamten Verlauf
+bis heute, unabhängig von der darüber ausgewählten Statistikperiode. Beginn und Ende
+zählen mit. Folgen über Silvester nennen alle betroffenen Jahre; eine bis heute
+laufende Folge ist gekennzeichnet. Bei gleicher Dauer steht die früher begonnene
+Folge zuerst. Nachträge oder Löschungen aktualisieren die Rangliste automatisch.

@@ -1,5 +1,13 @@
 # Änderungen
 
+## 1.0.8
+
+- Statistik startet standardmäßig mit dem aktuellen Kalenderjahr bis heute; aktive Zeitvorgaben wechseln beim Jahreswechsel automatisch mit. Frei gewählte Zeiträume bleiben erhalten.
+- Bezugsjahr direkt an den Kennzahlen auf Übersicht und Statistik sichtbar.
+- Der aktuelle Monat zeigt Gramm und gerundete Bieräquivalente und bleibt auch bei Auswahl eines historischen Dashboardjahres eindeutig beschriftet.
+- Rechenbasis der Bieräquivalente verdeutlicht: Alkoholmenge geteilt durch 20 g, anschließend ganzzahlig gerundet.
+- Fünf längste alkoholfreie Streaks seit dem 01.01.2024 mit Jahr, Beginn, Ende, Dauer und laufendem Status, unabhängig vom Statistikfilter.
+
 ## 1.0.7
 
 - Neuer Analysebericht unter Auswertung → Bericht & Gesundheit: Jahres- und Monatsvergleiche, gleiche Vergleichszeiträume, Trinktagmengen, Kalender und längste Trinkpausen.
