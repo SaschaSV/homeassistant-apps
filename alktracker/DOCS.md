@@ -23,6 +23,34 @@
 Bei `403`: Ingress verwenden, Besitzer-ID kontrollieren, HA/Supervisor aktualisieren
 und Ingress-Sitzung neu öffnen. Fehlende Identitätsheader erlauben ausdrücklich keinen Zugriff.
 
+## Zweites privates Profil
+
+Nach dem Update in **Alktracker → Konfiguration** die bestehende `owner_id` unverändert
+lassen und unter `secondary_user_id` die stabile Home-Assistant-Benutzer-ID des zweiten Kontos
+eintragen. Speichern und die App neu starten. Beide IDs müssen unterschiedlich sein.
+Die zweite Person öffnet Alktracker auf ihrem Smartphone mit ihrem eigenen vorhandenen HA-Konto;
+eine zusätzliche Anmeldung oder ein neues Passwort in Alktracker ist nicht nötig.
+Die Freischaltung erfolgt über die geschützte App-Konfiguration, nicht über Anzeigenamen.
+
+Ist ihre ID unbekannt, kann sie nach dem Update Alktracker einmal öffnen: Die noch
+gesperrte Einrichtungsseite zeigt ausschließlich ihre eigene ID an. Alternativ in der
+HA-Benutzerverwaltung den Benutzer im erweiterten Modus öffnen und dessen ID verwenden.
+Nach der Freischaltung zeigt die Kopfzeile den eigenen Profilnamen.
+
+Der bisherige Verlauf, Körperprofile, Vorlagen, Journal und KI-Konfiguration bleiben beim
+ersten Konto. Das zweite Konto startet ohne Getränke und Körperdaten mit eigenen Standardvorlagen;
+auch KI-Schlüssel und Einwilligung werden separat eingerichtet. Die längsten Streaks
+ihres neuen Profils beginnen bei der Anlage; frühere eigene Nachträge erweitern den Beginn.
+Die historische Rangliste des bisherigen Kontos startet weiterhin am 01.01.2024.
+Exporte, Berichte, Importvorschauen und lokale Wiederherstellungspunkte enthalten nur
+den jeweiligen Bestand. Ein Kontowechsel sperrt offene Ansichten bis zum erneuten Öffnen.
+Die gebundene `owner_id` darf nicht zum Profilwechsel ersetzt werden.
+
+Die Privatsphäre gilt für den Zugriff in Alktracker. Home-Assistant-Administratoren
+mit Zugriff auf App-Dateien oder vollständige HA-Sicherungen können technisch beide
+Bestände lesen; diese Trennung ist keine Verschlüsselung gegenüber dem Serverbetreiber.
+Ein vollständiges HA-App-Backup enthält beide Bestände und gehört entsprechend geschützt.
+
 ## Erfassen und auswerten
 
 Eine Vorlage öffnet ein Bearbeitungsblatt. Menge, Stärke, Anzahl und Datum prüfen und

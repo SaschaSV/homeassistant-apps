@@ -1,5 +1,13 @@
 # Änderungen
 
+## 1.0.9
+
+- Zweites privates Profil über die stabile Home-Assistant-Benutzer-ID in `secondary_user_id`, ohne zusätzliche Anmeldung.
+- Getrennte Datenbanken, Körperprofile, Vorlagen, KI-Einstellungen, Aufträge, Exporte, Berichte, Importvorschauen und lokale Sicherungen.
+- Bestehender Bestand bleibt beim bisherigen Konto; das zweite Profil startet ohne persönliche Einträge.
+- Sichtbarer eigener Profilname und Sperre offener Ansichten beim Home-Assistant-Kontowechsel.
+- Geschützte Einrichtungsseite zeigt einem noch nicht freigeschalteten Konto nur seine eigene Benutzer-ID.
+
 ## 1.0.8
 
 - Statistik startet standardmäßig mit dem aktuellen Kalenderjahr bis heute; aktive Zeitvorgaben wechseln beim Jahreswechsel automatisch mit. Frei gewählte Zeiträume bleiben erhalten.
